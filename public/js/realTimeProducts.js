@@ -1,4 +1,4 @@
-import { io } from "../../app";
+import { io } from "../../src/app.js";
 
 const socket = io.connect('http://localhost:8080');
 
@@ -17,8 +17,8 @@ async function renderProducts(products) {
                 style="max-height: 400px; aspect-ratio: 3/2; object-fit: contain;">
             <div class="card-body">
                 <h5 class="card-title">${products.title}</h5>
-                <p class="card-text">${products.brand}</p>
                 <p class="card-text">${products.description}</p>
+                <p class="card-text">${products.brand}</p>
                 <p class="card-text">Precio: $${products.price}</p>
                 <p class="card-text">Stock: ${products.stock}</p>
                 <p class="card-text">Categoría: ${products.category}</p>
@@ -33,7 +33,7 @@ socket.on('addProduct', (addProduct) => {
 });
 
 
-// Manejar el envío del formulario para agregar un producto
+//Agregar producto
 document.getElementById('addProductForm').addEventListener('submit', async (event) => {
     event.preventDefault();
 

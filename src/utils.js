@@ -5,9 +5,6 @@ import multer from "multer";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-export function getProductsFilePath() {
-    return path.join(__dirname, "../products.json");
-}
 
 export function configureMulter() {
     const storage = multer.diskStorage({

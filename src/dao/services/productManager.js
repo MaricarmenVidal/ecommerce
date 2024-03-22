@@ -25,7 +25,7 @@ const productManager = {
             if (!imageName) {
                 return res.status(400).json({ error: 'No se proporcionó una imagen válida' });
             }
-
+ 
             const newProduct = new Product({
                 title,
                 description,
