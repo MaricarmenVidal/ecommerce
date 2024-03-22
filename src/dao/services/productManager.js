@@ -3,6 +3,7 @@ import Product from "../models/products.js"
 
 const productManager = {
     getProducts: async (req, res) => {
+        
         try {
             const products = await Product.find().lean();
 

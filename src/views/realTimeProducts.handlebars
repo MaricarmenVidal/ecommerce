@@ -41,17 +41,17 @@
 
 <div class="container mt-5">
     <div class="row" id="productList">
-        {{#each productos}}
+        {{#each products}}
         <div class="col-md-4 mb-4">
             <div class="card">
-                <img src="/images/{{this.image}}" class="card-img-top img-fluid" alt="{{this.title}}" style="max-height: 400px; aspect-ratio: 3/2; object-fit: contain;">
+                <img src="/images/{{this.image}}" class="card-img-top img-fluid" alt="{{title}}" style="max-height: 400px; aspect-ratio: 3/2; object-fit: contain;">
                 <div class="card-body">
                     <h5 class="card-title">{{this.title}}</h5>
-                    <p class="card-text">{{this.description}}</p>
-                    <p class="card-text">Precio: S/. {{this.price}}.00</p>
-                    <p class="card-text">Stock: {{this.stock}}</p>
-                    <p class="card-text">Categoría: {{this.category}}</p>
-                    <button class="btn btn-danger delete-btn" data-product-id="{{this._id}}">Eliminar Producto</button>
+                    <p class="card-text">{{description}}</p>
+                    <p class="card-text">Precio: S/. {{price}}.00</p>
+                    <p class="card-text">Stock: {{stock}}</p>
+                    <p class="card-text">Categoría: {{category}}</p>
+                    <button class="btn btn-danger delete-btn" data-product-id="{{_id}}">Eliminar Producto</button>
                 </div>
             </div>
         </div>

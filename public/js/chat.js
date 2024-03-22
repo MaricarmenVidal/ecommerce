@@ -6,8 +6,8 @@ socket.on('addMessage', (addMessage) => {
     chatElement.classList.add('col-md-4', 'mb-4');
     chatElement.innerHTML = `
         <div class="card">
-            <h2>usuario: ${addMessage.user}</h2>
-            <p>mensaje: ${addMessage.text}</p>
+            <h2> Usuario: ${addMessage.user}</h2>
+            <p> Mensaje: ${addMessage.text}</p>
         </div>`;
     chatList.appendChild(chatElement);
 });

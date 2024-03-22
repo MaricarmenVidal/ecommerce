@@ -19,7 +19,7 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.static(path.join(__dirname+'/public')))
 app.engine('handlebars', handlebars.engine())
 
-//Routes
+//Route principal
 app.use("/api/", router)
 
 mongoose.connect("mongodb+srv://maricarmenvidal204:uS5W1cXzpwJjkOWv@cluster0.zdyix6b.mongodb.net/",{
